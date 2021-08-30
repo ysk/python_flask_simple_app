@@ -1,0 +1,19 @@
+<!--
+  jinja template
+  https://jinja.palletsprojects.com/en/3.0.x/
+-->
+<!doctype html>
+<html>
+  <head>
+    <title>sample</title>
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <br>
+    <ul>
+    {% for member in members %}
+      <li>{{ loop.index }}: {{ member.name }} － {{ member.age }}歳</li>
+    {% endfor %}
+    </ul>
+  </body>
+</html>
