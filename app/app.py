@@ -1,5 +1,6 @@
-from flask import Flask, render_template
-from flask import Blueprint
+from flask import Flask
+from flask import render_template
+from flask import request
 
 app = Flask(__name__)
 
@@ -21,6 +22,14 @@ def detail(user_id):
     user_name = '山田太郎'
     message   = 'はじめまして山田太郎です。'
     return render_template('detail.html', user_id=user_id, user_name=user_name, message=message)
+
+
+@app.route('/search', methods=['GET'])
+def search():
+  q = request.args.get('q', '')
+  # http://localhost:5000/search?q=abcd
+  # abcdを返す
+  return q
 
 ##実行
 if __name__ == '__main__':
