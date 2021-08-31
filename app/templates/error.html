@@ -3,15 +3,14 @@
 <style>
         /*ページ固有のスタイルなどの記述 */
 </style>
+
 {% endblock %}
 {% block content %} 
 <h1>
 {% block title %}サンプルアプリ｜{{ title }}{% endblock %}
 </h1>
 <br>
-<ul>
-    {% for member in members %}
-    <li>{{ member.id }}: {{ member.name }} － {{ member.age }}歳</li>
-    {% endfor %}
-</ul>
+
+不正なリクエストです。
+
 {% endblock %}

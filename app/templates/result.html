@@ -3,15 +3,16 @@
 <style>
         /*ページ固有のスタイルなどの記述 */
 </style>
+
 {% endblock %}
 {% block content %} 
 <h1>
 {% block title %}サンプルアプリ｜{{ title }}{% endblock %}
 </h1>
 <br>
-<ul>
-    {% for member in members %}
-    <li>{{ member.id }}: {{ member.name }} － {{ member.age }}歳</li>
-    {% endfor %}
-</ul>
+
+<h2>{{name}}</h2>
+
+<h2>画像</h2>
+<p><img src="{{image_url}}" style="max-width: 300px;"></p>
 {% endblock %}
